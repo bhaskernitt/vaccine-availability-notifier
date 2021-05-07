@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 this_file_path = os.path.abspath(os.path.dirname(__file__))
 
-VERSION = '0.0.3'
+VERSION = '0.0.7'
 
 
 def read(*parts):
@@ -14,16 +14,11 @@ def read(*parts):
 
 install_requires = [
     'click',
-    'pyfiglet',
-    'colorama',
-    'configparser',
-    'tqdm',
-    'tabulate',
+    'schedule',
     'requests',
-    'pandas',
-    'openpyxl',
     "setuptools",
-    'wheel'
+    'wheel',
+    'secure-smtplib'
 ]
 
 setup_options = dict(
