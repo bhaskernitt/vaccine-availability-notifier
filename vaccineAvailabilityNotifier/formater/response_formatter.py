@@ -1,6 +1,6 @@
 import json
 
-from vaccineAvailabilityNotifier.constants.constants import Formats, ERROR_HEADER
+from ...constants.constants import Formats, ERROR_HEADER
 
 
 def _create_table(__response, __format, __operation, __headers, __resource_type, __list_key):

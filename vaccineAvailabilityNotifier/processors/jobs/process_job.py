@@ -1,8 +1,8 @@
 import json
 from datetime import datetime
 
-from vaccineAvailabilityNotifier.client.actionsImpl import ActionsImpl
-from vaccineAvailabilityNotifier.email.email_sender import send_email
+from ...client.actionsImpl import ActionsImpl
+from ...email.email_sender import send_email
 
 
 class ProcessJob:
