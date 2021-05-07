@@ -1,4 +1,4 @@
-from ...commands import router
+from vaccineAvailabilityNotifier.commands import router
 
 
 def main():

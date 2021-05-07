@@ -1,6 +1,6 @@
 import click
 
-from ...processors.jobs.schedule_job import ScheduleJob
+from vaccineAvailabilityNotifier.processors.jobs.schedule_job import ScheduleJob
 
 
 @click.command("schedule", help='schedule vaccine availability task')

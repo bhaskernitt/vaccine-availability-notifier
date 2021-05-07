@@ -1,6 +1,6 @@
 import requests
 
-from ...client.actions import Actions
+from vaccineAvailabilityNotifier.client.actions import Actions
 
 
 def build_url(PINCODE, DATE):

@@ -2,7 +2,7 @@ import time
 
 import schedule
 
-from ...processors.jobs.process_job import ProcessJob
+from vaccineAvailabilityNotifier.processors.jobs.process_job import ProcessJob
 
 
 def execute_run():
