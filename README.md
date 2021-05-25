@@ -1,16 +1,18 @@
 # vaccine-availability-notifier
 
 
-Install via homebrew (MAC OS)
+# Install via homebrew (MAC OS)
 
-Install : brew tap bhaskernitt/brew && brew install bhaskernitt/brew/van
+  <strong>Install</strong> : brew tap bhaskernitt/brew && brew install bhaskernitt/brew/van
 
-Uninstall : brew tap bhaskernitt/brew && brew uninstall bhaskernitt/brew/van
+  <strong>Uninstall</strong> : brew tap bhaskernitt/brew && brew uninstall bhaskernitt/brew/van
+  
+  <strong>untap</strong> (removing packe from system) : brew untap bhaskernitt/brew
 
 
 
 
-Install using pip:
-
-pip install -U --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --upgrade vaccine-availability-notifier
+# Install using pip:
+  
+  <strong>install:<strong/> pip install -U --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --upgrade vaccine-availability-notifier
 
