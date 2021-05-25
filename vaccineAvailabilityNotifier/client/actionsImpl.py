@@ -26,15 +26,3 @@ class ActionsImpl(Actions):
             print(e)
             time.sleep(10)
         return r
-
-    def create(self, uri, payload):
-        r = None
-        try:
-            url = build_url()
-            r = requests.post(url, data=payload, headers=get_headers())
-        except requests.exceptions.RequestException as e:
-            exit()
-        return r
-
-    def delete(self, uri, payload=None):
-        return self.create(uri, payload)

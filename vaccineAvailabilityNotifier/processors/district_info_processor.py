@@ -11,16 +11,10 @@ def get_url(state_id):
 class DistrictIdProcessor:
     __action_processor = ActionsImpl()
 
-    def __init__(self, state_name, district_name, all, sender_email_id, sender_email_password,
-                 receiver_email,
-                 include_45):
+    def __init__(self, state_name, district_name, all):
         self.state_name = state_name
         self.district_name = district_name
         self.all = all
-        self.sender_email_id = sender_email_id
-        self.sender_email_password = sender_email_password
-        self.receiver_email = receiver_email
-        self.include_45 = include_45
 
     def process(self):
 

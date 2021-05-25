@@ -37,7 +37,7 @@ def info(ctx):
 @click.pass_context
 @click.option("--output-format", "-of", default='table', type=str, required=False)
 def feedback(ctx, output_format):
-    pass
+    """provide the feedback"""
 
 
 entry_point.add_command(schedule_job_cmd.cmd)

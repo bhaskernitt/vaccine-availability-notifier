@@ -3,8 +3,8 @@ import time
 import schedule
 
 from vaccineAvailabilityNotifier.processors.district_info_processor import DistrictIdProcessor
-from vaccineAvailabilityNotifier.processors.jobs.process_by_district_id import ProcessByDistrictId
-from vaccineAvailabilityNotifier.processors.jobs.process_by_pincodes import ProcessJob
+from vaccineAvailabilityNotifier.processors.process_by_district_id import ProcessByDistrictId
+from vaccineAvailabilityNotifier.processors.process_by_pincodes import ProcessByPinCodes
 
 
 def execute_run():
@@ -31,12 +31,8 @@ class ScheduleJob:
             try:
                 if self.state_name is not None and self.district_name is not None:
                     self.district_id = str(
-                        DistrictIdProcessor(state_name=self.state_name, district_name=self.district_name, all=False,
-                                            sender_email_id=self.sender_email_id,
-                                            sender_email_password=self.sender_email_password,
-                                            receiver_email=self.receiver_email,
-                                            include_45=self.include_45) \
-                        .process()["district_id"])
+                        DistrictIdProcessor(state_name=self.state_name, district_name=self.district_name, all=False) \
+                            .process()["district_id"])
                     ProcessByDistrictId(state_name=self.state_name, district_name=self.district_name,
                                         sender_email_id=self.sender_email_id,
                                         sender_email_password=self.sender_email_password,
@@ -44,10 +40,10 @@ class ScheduleJob:
                                         include_45=self.include_45, district_id=self.district_id) \
                         .process()
                 else:
-                    ProcessJob(sender_email_id=self.sender_email_id,
-                               sender_email_password=self.sender_email_password,
-                               pincodes=self.pincodes, receiver_email=self.receiver_email,
-                               include_45=self.include_45) \
+                    ProcessByPinCodes(sender_email_id=self.sender_email_id,
+                                      sender_email_password=self.sender_email_password,
+                                      pincodes=self.pincodes, receiver_email=self.receiver_email,
+                                      include_45=self.include_45) \
                         .process()
                 time.sleep(time_in_seconds)
             except Exception as e:

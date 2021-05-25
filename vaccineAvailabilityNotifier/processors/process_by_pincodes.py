@@ -10,7 +10,7 @@ def get_url(params={}):
            params["date"]
 
 
-class ProcessJob:
+class ProcessByPinCodes:
     __action_processor = ActionsImpl()
 
     def __init__(self, sender_email_id, sender_email_password, pincodes, receiver_email, include_45):
