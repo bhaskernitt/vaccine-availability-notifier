@@ -19,6 +19,28 @@ def send_email(res, sender_email_id, sender_email_password, receiver_email_id):
     message['To'] = receiver_address
     message['Subject'] = '[Important ] Hurry !!!  Vaccines are available...'  # The subject line
     # The body and the attachments for the mail
+    _send(message, mail_content, sender_address, sender_pass, receiver_address)
+    print('Mail Sent')
+
+
+def send_email_switch(sender_email_id, sender_email_password, receiver_email_id):
+    mail_content = '''Please switch wifi'''
+    mail_content = mail_content + "\n\n\nThank you \nNandkishor bhasker"
+    # The mail addresses and password
+    sender_address = sender_email_id
+    sender_pass = sender_email_password
+    receiver_address = receiver_email_id
+    # Setup the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_address
+    message['To'] = receiver_address
+    message['Subject'] = '[Important ] Hurry !!!  Please switch wifi...'  # The subject line
+    # The body and the attachments for the mail
+    _send(message, mail_content, sender_address, sender_pass, receiver_address)
+    print('switch email Sent')
+
+
+def _send(message, mail_content, sender_address, sender_pass, receiver_address):
     message.attach(MIMEText(mail_content, 'plain'))
     # Create SMTP session for sending the mail
     session = smtplib.SMTP('smtp.gmail.com', 587)  # use gmail with port
@@ -28,7 +50,6 @@ def send_email(res, sender_email_id, sender_email_password, receiver_email_id):
     text = message.as_string()
     session.sendmail(sender_address, receiver_address, text)
     session.quit()
-    print('Mail Sent')
 
 
 def send_email_switch(sender_email_id, sender_email_password, receiver_email_id):
