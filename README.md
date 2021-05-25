@@ -6,6 +6,8 @@
   <strong>Install</strong> : brew tap bhaskernitt/brew && brew install bhaskernitt/brew/van
 
   <strong>Uninstall</strong> : brew tap bhaskernitt/brew && brew uninstall bhaskernitt/brew/van
+  
+  <strong>untap</strong> (removing packe from system) : brew untap bhaskernitt/brew
 
 
 
