@@ -41,3 +41,5 @@ def feedback(ctx, output_format):
 
 
 entry_point.add_command(schedule_job_cmd.cmd)
+entry_point.add_command(schedule_job_cmd.cmd_get_state_id)
+entry_point.add_command(schedule_job_cmd.cmd_get_district_id)

@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 this_file_path = os.path.abspath(os.path.dirname(__file__))
 
-VERSION = '0.0.7'
+VERSION = '0.0.15'
 
 
 def read(*parts):
