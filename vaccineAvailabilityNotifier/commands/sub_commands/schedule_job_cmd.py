@@ -11,7 +11,7 @@ from vaccineAvailabilityNotifier.processors.state_info_processor import StateIdP
 @click.option('--scheduler-time', '-st', required=False, default=5, type=int)
 @click.option('--gmail-id', '-gid', required=True, default="bhasker.nandkishortest01@gmail.com", type=str)
 @click.option('--gmail-password', '-gpass', required=False, default="System*#541", type=str)
-@click.option('--receiver-email', '-re', required=False, default="bhasker.nandkishor@gmail.com", type=str,
+@click.option('--receiver-email', '-re', required=False, default=["bhasker.nandkishor@gmail.com"], type=str,
               multiple=True)
 @click.option('--state', '-s', required=False, default=None, type=str)
 @click.option('--district', '-d', required=False, default=None, type=str)
