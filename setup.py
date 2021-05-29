@@ -28,7 +28,7 @@ setup_options = dict(
     author='Nandkishor bhasker',
     author_email='bhasker.nandkishor@gmail.com',
     version=VERSION,
-    python_requires='>=3.9',
+    python_requires='>=3.8',
     entry_points={
         'console_scripts': [
             'van = vaccineAvailabilityNotifier.__main__:main'
