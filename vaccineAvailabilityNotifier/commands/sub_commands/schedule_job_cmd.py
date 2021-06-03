@@ -9,9 +9,9 @@ from vaccineAvailabilityNotifier.processors.state_info_processor import StateIdP
 @click.pass_context
 @click.option('--include-45', '-i45', required=False, default=False, type=bool)
 @click.option('--scheduler-time', '-st', required=False, default=5, type=int)
-@click.option('--gmail-id', '-gid', required=True, default="bhasker.nandkishortest01@gmail.com", type=str)
-@click.option('--gmail-password', '-gpass', required=False, default="System*#541", type=str)
-@click.option('--receiver-email', '-re', required=False, default=["bhasker.nandkishor@gmail.com"], type=str,
+@click.option('--gmail-id', '-gid', required=True, default="abc@abc.xom", type=str)
+@click.option('--gmail-password', '-gpass', required=False, default="password", type=str)
+@click.option('--receiver-email', '-re', required=False, default=["abc@abc.com"], type=str,
               multiple=True)
 @click.option('--state', '-s', required=False, default=None, type=str)
 @click.option('--district', '-d', required=False, default=None, type=str)
